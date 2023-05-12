@@ -10,12 +10,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="relative w-full">
-        <img class="absolute z-0 object-cover left-0 top-0 w-full h-full" src="<?php echo get_template_directory_uri(); ?>/public/header.jpg" alt="Ecstatic Dance Rotterdam main background graphic">
-        <a href="<?php echo get_home_url(); ?>">
-            <img class="hover:brightness-90 hover:-translate-y-1 transition-all relative z-10 py-16 w-full px-5 max-w-screen-sm mx-auto" src="<?php echo get_template_directory_uri(); ?>/public/ed_logo.png" alt="Ecstatic Dance Rotterdam logo" />
-        </a>
-    </header>
     <?php $menuParameters = [
         "theme_location" => "primary-menu",
         "container" => false,
@@ -23,6 +17,30 @@
         "items_wrap" => '%3$s',
         "depth" => 0,
     ]; ?>
-    <nav id="navbar" class="z-50 transition-all shadow sticky top-0 bg-white flex items-center justify-center md:gap-10 sm:gap-6 gap-5 py-6 md:text-xl text-base text-slate-600">
-        <?php echo strip_tags(wp_nav_menu($menuParameters), "<a>"); ?>
-    </nav>
+
+    <header id="navbar" class="transition-all flex py-3 justify-between px-4 z-50 shadow sticky top-0 bg-sky-100 items-center">
+        <a class="!text-slate-800 !hover:text-rose-500 relative z-50 font-creative text-3xl" href="<?php echo home_url(); ?>">
+            Ecstatic Dance Rotterdam
+        </a>
+        <button id="hamburger" class="relative z-50 block md:hidden hamburger hamburger--collapse">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <nav id="navigation" class="hidden flex absolute md:relative md:flex items-center justify-center md:gap-10 sm:gap-6 gap-5 text-4xl md:text-xl text-base text-slate-600 bg-sky-300 md:bg-transparent h-screen md:h-auto w-screen md:w-auto left-0 top-0 flex-col md:flex-row">
+
+            <?php echo strip_tags(wp_nav_menu($menuParameters), "<a>"); ?>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navToggle = document.getElementById("hamburger");
+            const navContent = document.getElementById("navigation");
+
+            navToggle.addEventListener("click", function() {
+                navContent.classList.toggle("hidden");
+                navToggle.classList.toggle("is-active");
+            });
+        });
+    </script>

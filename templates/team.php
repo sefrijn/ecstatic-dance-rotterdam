@@ -21,7 +21,7 @@
 
     // Display the posts
     if ($query->have_posts()) {
-        echo '<ul class="grid grid-cols-3 gap-5 mx-auto max-w-screen-md items-start">';
+        echo '<ul class="px-4 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 mx-auto max-w-screen-md items-start">';
 
         while ($query->have_posts()) {
             $query->the_post();
@@ -60,7 +60,7 @@
     $query = new WP_Query($args);
 
     if ($query->have_posts()) {
-        echo '<ul class="grid grid-cols-5 gap-5 mx-auto max-w-screen-md">';
+        echo '<ul class="px-4 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-5 mx-auto max-w-screen-md">';
 
         while ($query->have_posts()) {
             $query->the_post();

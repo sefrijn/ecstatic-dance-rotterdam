@@ -4,6 +4,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Outfit:wght@400;500;600&display=swap");
 
+$hamburger-layer-height: 3px ;
+$hamburger-layer-width: 30px;
+@import "/node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
 html,
 body {
   scroll-behavior: smooth;
@@ -12,13 +16,13 @@ body {
   @apply text-rose-700 hover:text-rose-500;
 }
 nav > a {
-  @apply hover:text-rose-500 font-medium;
-}
-a[aria-current="page"]:first-of-type {
-  @apply text-rose-500;
+  @apply block hover:text-rose-500 font-medium;
+  &:first-of-type{
+    @apply block md:hidden;
+  }
 }
 #navbar.scroll {
-  @apply py-3;
+  @apply py-1.5;
 }
 h1 {
   @apply font-creative mt-16 mb-8 md:text-6xl text-4xl text-sky-500;
