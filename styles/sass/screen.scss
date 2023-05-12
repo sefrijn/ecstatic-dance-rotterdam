@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Outfit:wght@400;500;600&display=swap");
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+*:not(nav) > a {
+  @apply text-rose-700 hover:text-rose-500;
+}
+nav > a {
+  @apply hover:text-rose-500 font-medium;
+}
+a[aria-current="page"]:first-of-type {
+  @apply text-rose-500;
+}
+#navbar.scroll {
+  @apply py-3;
+}
+h1 {
+  @apply font-creative mt-16 mb-8 md:text-6xl text-4xl text-sky-500;
+}
+h2 {
+  @apply font-creative mt-16 mb-8 md:text-5xl text-4xl text-sky-500;
+}
+h3 {
+  @apply font-creative my-6 text-4xl text-sky-300;
+}
+h4 {
+  @apply font-creative my-5 text-2xl text-slate-500;
+}
+section {
+  @apply mx-auto px-4;
+}
+p {
+  @apply text-lg leading-relaxed mb-5;
+  strong {
+    @apply font-bold;
+  }
+}
+.dj-bio p{
+  @apply text-sm text-slate-700 leading-relaxed mb-0;
+  strong {
+    @apply font-bold;
+  }
+  a{
+    @apply text-base;
+  }
+}
+ul {
+  @apply list-inside list-decimal;
+}
+ol {
+  @apply list-inside list-disc;
+}
+li {
+  @apply text-lg;
+}
+input[type="submit"].ninja-forms-field.nf-element {
+  @apply bg-rose-500 cursor-pointer hover:bg-rose-700 hover:text-white;
+}
+
+.he-title {
+  @apply text-2xl;
+}

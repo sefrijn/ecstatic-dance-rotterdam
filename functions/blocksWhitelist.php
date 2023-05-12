@@ -13,7 +13,10 @@ function gute_whitelist_blocks($allowed_block_types)
         'core/spacer',
         'core/cover',
         'core/columns',
-        'core/column'
+        'core/column',
+        'core/buttons',
+        'core/button',
+        'core/shortcode',
     );
 }
 add_filter('allowed_block_types', 'gute_whitelist_blocks', 10, 2);

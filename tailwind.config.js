@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./*.php"],
+  content: ["./*.php", "./**/*.php"],
   theme: {
     fontFamily: {
       sans: ["Outfit", "sans-serif"],

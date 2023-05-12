@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "mix watch",
-    "tailwind": "tailwindcss -i ./css/screen.css -o ./dist/screen.css --watch"
+    "tailwind": "tailwindcss -i ./styles/css/screen.css -o ./styles/dist/screen.css --watch"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

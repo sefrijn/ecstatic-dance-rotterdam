@@ -7,9 +7,9 @@ mix
     proxy: "http://edrdam.test/",
     injectChanges: false,
     online: true,
-    files: ["*.php", "dist/**/*.css"],
+    files: ["*.php","templates/*.php","styles/dist/*.css"],
   });
-mix.sass("sass/screen.scss", "css");
+mix.sass("styles/sass/screen.scss", "styles/css");
 //   //   .options({
 //   //     processCssUrls: false,
 //   //   })
