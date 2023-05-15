@@ -10,7 +10,3 @@ mix
     files: ["*.php","templates/*.php","styles/dist/*.css"],
   });
 mix.sass("styles/sass/screen.scss", "styles/css");
-//   //   .options({
-//   //     processCssUrls: false,
-//   //   })
-//   .version();

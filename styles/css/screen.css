@@ -871,7 +871,7 @@ nav > a:first-of-type {
 }
 
 h1 {
-  @apply font-creative mt-16 mb-8 md:text-6xl text-4xl text-sky-500;
+  @apply font-creative mt-16 mb-8 lg:text-6xl sm:text-5xl text-4xl text-sky-500;
 }
 
 h2 {

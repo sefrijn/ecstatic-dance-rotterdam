@@ -19,7 +19,7 @@
     ]; ?>
 
     <header id="navbar" class="transition-all flex py-3 justify-between px-4 z-50 shadow sticky top-0 bg-sky-100 items-center">
-        <a class="!text-slate-800 !hover:text-rose-500 relative z-50 font-creative text-3xl" href="<?php echo home_url(); ?>">
+        <a class="!text-slate-800 hover:!text-rose-500 relative z-50 font-creative text-3xl" href="<?php echo home_url(); ?>">
             Ecstatic Dance Rotterdam
         </a>
         <button id="hamburger" class="relative z-50 block md:hidden hamburger hamburger--collapse">
